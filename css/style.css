@@ -1,0 +1,1239 @@
+
+/* Reset CSS */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+
+}
+
+h1, h2, h3{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+
+}
+hr{
+    background-color: #32464c;
+    max-width: 400px;
+}
+
+i{
+    color: #ccc;
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    color: #393939;
+}
+
+body {
+    margin:0 auto;
+    background: url("../img/floorbg.jpg") no-repeat fixed;
+    background-size: 100% 100%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+ul, li {
+    list-style-type: none;
+    text-align: center;
+}
+
+/***********************************************HEADER****************************************************/
+.header {
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.haut_droit a {
+    font-style: italic;
+    text-align: center;
+
+}
+
+.haut_droit a:hover {
+    color: #B20000;
+}
+
+.haut_droit img {
+    width: 20px;
+
+}
+
+/************************************************** Menu **************************************************/
+nav {
+    background: black;
+    width: 100%;
+    float: left;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+
+}
+
+nav a:hover {
+    background-color: #ccc;
+}
+
+
+
+/**************************************************** boucle generation produit ************************************************/
+
+/**************************************************** Page ************************************************/
+
+section {
+    width: 100%;
+    background: white;
+    float: left;
+    padding: 20px;
+}
+
+.erreur {
+    background: purple;
+    padding: 5px;
+    color: #D6D6D6;
+}
+
+.validation {
+    background: #C4C4C4;
+    padding: 5px;
+    color: white;
+}
+
+/**************************************************** Formulaires ************************************************/
+
+form {
+    display: inline-block;
+}
+
+label {
+    margin-top: 10px;
+    width: 150px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    display: block;
+    color: #c4c4c4;
+}
+
+label.inline {
+    margin-right: 50px;
+}
+
+input, textarea, select, option {
+    background-color: #FFF3F3;
+}
+
+input, textarea, select {
+    display: block;
+    padding: 3px;
+    border: 1px solid #F5C5C5;
+    border-radius: 2px;
+}
+
+
+input:focus:invalid, textarea:focus:invalid {
+    border-color: #ff0000;
+    background: white;
+}
+
+input:focus:valid, textarea:focus:valid {
+    border-color: #56c93f;
+}
+
+input:valid, textarea:valid {
+    background: white;
+}
+
+textarea {
+    height: 100px;
+    width: 290px;
+    max-height: 100px;
+    max-width: 290px;
+}
+
+input[type=checkbox] {
+display: inline;
+}
+
+input[type=submit], input[type=reset] {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: #cdffff;
+    background-color: #56c93f;
+    padding: 5px;
+}
+button{
+    color: #cdffff;
+    background-color: #56c93f;
+    padding: 5px; 
+    border-radius: 5px;
+    border:none;
+}
+
+/**************************************************** index accueil ************************************************/
+.index_droit {
+    background: white;
+    padding-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+    display: inline;
+}
+
+.index_droit img {
+    height: 300px;
+    width: 350px;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+}
+
+.index_gauche {
+    max-width: 490px;
+    height: 530px;
+    float: left;
+    background: #ccc;
+    opacity: 0.9;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+}
+
+.index_gauche p {
+    text-align: justify;
+    margin: 10px;
+    color: #333355;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+/**************************************************** reservation ************************************************/
+
+#reservation {
+    width: 100%;
+    height: 560px;
+    background: white;
+    float: left;
+    overflow-y: scroll;
+}
+
+#reservation h2 {
+    margin-top: 20px;
+}
+
+#reservation img h3 {
+    padding: 30px;
+    float: left;
+}
+
+#reservation img {
+    padding-top: 10px;
+    height: 270px;
+    width: 470px;
+    box-shadow: 5px 5px 3px 0 #656565;
+}
+
+#reservation li {
+    height: 400px;
+    width: 900px;
+    float: left;
+    background: whitesmoke;
+    margin: 50px;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+}
+
+#reservation .produit_info {
+    float: right;
+    margin: 100px;
+}
+
+#reservation .lien {
+    float: left;
+    margin-left: 298px;
+}
+
+#reservation .lien a {
+    float: left;
+    padding: 10px;
+}
+
+/*******************************reservation detail*********************************/
+
+#descript_detail_salle {
+    float: left;
+}
+
+.detail_salle {
+    height: 300px;
+    width: 400px;
+    float: left;
+    background: #CACACA;
+    margin: 30px;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+}
+
+.detail_salle img {
+    margin: 5% 12% 12%;
+}
+
+.description_detail {
+    height: 200px;
+    width: 500px;
+    float: left;
+    background: #CACACA;
+    margin: 8% 30px 30px;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+}
+
+.description_detail p {
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#descript_detail_salle span {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 15px;
+    color: #393939;
+}
+
+/***************************info map*****************************/
+
+.info_detail {
+    width: 400px;
+    float: left;
+    background: #CACACA;
+    margin: 30px;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+
+}
+
+.info_detail p {
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#googlemapapi {
+    height: 190px;
+    width: 400px;
+
+}
+
+/*******************************avis*********************************/
+.avis_cont {
+    float: left;
+    background: #CACACA;
+    margin: 70px;
+    overflow-y: auto;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+}
+
+.avis_cont p {
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.avis_cont form {
+    background: #CACACA;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+
+.note {
+    padding: 20px;
+
+}
+
+#avis_note span {
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/*******************************suggestion*********************************/
+#suggestion {
+    width: 100%;
+    float: left;
+    background: #CACACA;
+    overflow-x: scroll;
+    display: inline-block;
+    font-size: 12px;
+
+}
+
+#suggestion li {
+    display: inline-block;
+    padding-left: 25px;
+
+}
+
+#suggestion a {
+    display: block;
+
+}
+
+#suggestion h3 {
+    font-size: 15px
+
+}
+
+#suggestion li img {
+    height: 100px;
+    width: 150px;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+}
+
+/*******************************recherche*********************************/
+.recherche{
+width: 100%;
+}
+.recherchedate {
+    background: whitesmoke;
+    padding: 10px;
+    width: 48.2%;
+    float: left;
+    margin: 5px;
+}
+
+.rechercheville {
+    background: whitesmoke;
+    padding: 10px;
+    width: 48.2%;
+    float: left;
+    margin: 5px;
+}
+
+/***********resultat***************/
+#resultat {
+    font-family: 'Oswald', sans-serif;
+}
+
+#resultat {
+    width: 100%;
+    background: white;
+    float: left;
+
+}
+
+#resultat img h3 {
+    padding: 30px;
+    float: left;
+
+}
+
+#resultat img {
+    padding-top: 10px;
+    height: 270px;
+    width: 470px;
+    box-shadow: 5px 5px 3px 0 #656565;
+}
+
+#resultat li {
+    height: 400px;
+    width: 900px;
+    float: left;
+    background: whitesmoke;
+    margin: 50px;
+    -moz-box-shadow: 5px 5px 3px 0px #656565;
+    -webkit-box-shadow: 5px 5px 3px 0px #656565;
+    -o-box-shadow: 5px 5px 3px 0px #656565;
+    box-shadow: 5px 5px 3px 0px #656565;
+
+}
+
+#resultat .produit_info {
+    float: right;
+    margin: 100px;
+
+}
+
+#resultat .lien {
+    float: left;
+    margin-left: 298px;
+
+}
+
+/*******************************se connecter/deconnexion*********************************/
+
+#connect {
+    float: left;
+    margin: 70px;
+    background: whitesmoke;
+    padding-left: 20px;
+}
+
+.inscri_ici {
+    float: left;
+    background-color: whitesmoke;
+    margin: 70px;
+    padding: 50px;
+}
+
+/*******************************mdp oublié*********************************/
+#pw_new form {
+    background-color: whitesmoke;
+    padding: 50px;
+    width: 280px;
+    margin: 50px;
+    float: left;
+}
+
+#pw_new h2 {
+    text-align: justify;
+}
+
+.inscri_ici {
+    width: 280px;
+    float: left;
+    background-color: whitesmoke;
+    margin: 80px;
+    padding: 40px;
+
+}
+
+/*******************************inscription*********************************/
+
+
+.clavier img {
+    float: right;
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    margin: 100px;
+    -moz-box-shadow: -2px 1px 3px 0px #656565;
+    -webkit-box-shadow: -2px 1px 3px 0px #656565;;
+    -o-box-shadow: -2px 1px 3px 0px #656565;
+    box-shadow: -3px 5px 3px 0px #656565;
+
+}
+
+/*******************************profil*********************************/
+
+#profil {
+    text-align: justify;
+    background: whitesmoke;
+    padding: 30px;
+    margin: 30px;
+}
+
+#profil_commande {
+    background: whitesmoke;
+    padding: 30px;
+    margin: 30px;
+
+}
+
+#profil_commande table {
+    margin-top: 10px;
+    width: 300px;
+
+}
+
+#profil_commande td {
+    padding: 5px;
+    margin-top: 5px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+
+}
+
+#modif_profil {
+    background: whitesmoke;
+    float: left;
+    width: 450px;
+    display: inline-block;
+    padding: 10px;
+
+}
+
+.logomodifprofil img {
+    float: right;
+    width: 300px;
+    display: inline-block;
+    margin: 100px;
+}
+
+/*******************************panier*********************************/
+
+.panier {
+    background-color: #ffffff;
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.panier table {
+    margin: auto;
+    border: solid 1px #DBEAF9;
+    list-style-position: inside;
+
+}
+
+.panier th {
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #B6ACBD;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.panier td {
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #DBEAF9;
+    text-align: center;
+    padding: 5px;
+
+}
+
+#panierform {
+    margin-left: 70px;
+    float: left;
+    width: 450px;
+    display: block;
+}
+
+.modalite {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+
+}
+
+/************************************************************************************ADMINISTRATEUR**************************************************************************/
+.choixadmin {
+    text-align: center;
+}
+
+/*******************************gestion des salles*********************************/
+
+.gestionsalle table {
+    margin: auto;
+    border: solid 1px #DBEAF9;
+}
+
+.gestionsalle th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #C4C4C4;
+    text-align: center;
+    width: 120px;
+    padding: 5px;
+
+}
+
+.gestionsalle td {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #DBEAF9;
+    text-align: center;
+
+}
+.gestionsalle p{
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+}
+
+#ajout_salle {
+    background: whitesmoke;
+    float: left;
+    display: inline-block;
+    padding: 10px;
+
+}
+
+.clavier img {
+    float: right;
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    margin: 100px;
+    -moz-box-shadow: -2px 1px 3px 0px #656565;
+    -webkit-box-shadow: -2px 1px 3px 0px #656565;;
+    -o-box-shadow: -2px 1px 3px 0px #656565;
+    box-shadow: -3px 5px 3px 0px #656565;
+
+}
+
+/*******************************gestion des avis*********************************/
+.gestion_avis table {
+    margin-top: 20px;
+    border: solid 1px #DBEAF9;
+    margin: auto;
+}
+
+.gestion_avis p {
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+
+}
+
+.gestion_avis td {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #DBEAF9;
+    text-align: center;
+    padding: 5px;
+}
+
+.gestion_avis tr {
+    background: white;
+}
+
+.gestion_avis th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #C4C4C4;
+    text-align: center;
+    padding: 10px;
+}
+
+/*******************************gestions des produits*********************************/
+.gestionproduit table {
+    margin: auto;
+    border: solid 1px #DBEAF9;
+
+}
+
+.gestionproduit p {
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+}
+
+.gestionproduit td {
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #DBEAF9;
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+
+}
+
+.gestionproduit tr {
+    background: white;
+}
+
+.gestionproduit th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #C4C4C4;
+    text-align: center;
+    width: 120px;
+    padding: 5px;
+}
+
+#ajout_produit {
+    background: whitesmoke;
+    float: left;
+    display: inline-block;
+}
+
+.produit img {
+    float: right;
+    width: 200px;
+    height: 300px;
+    display: inline-block;
+    margin: 100px;
+    -moz-box-shadow: -2px 1px 3px 0px #656565;
+    -webkit-box-shadow: -2px 1px 3px 0px #656565;;
+    -o-box-shadow: -2px 1px 3px 0px #656565;
+    box-shadow: -3px 5px 3px 0px #656565;
+}
+
+/*******************************gestions codes promo*********************************/
+.gestionpromo table {
+    margin-top: 20px;
+    margin: auto;
+    border: solid 1px #DBEAF9;
+}
+
+.gestionpromo p {
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+}
+
+.gestionpromo td {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #DBEAF9;
+    text-align: center;
+    padding: 5px;
+}
+
+.gestionpromo tr {
+    background: white;
+}
+
+.gestionpromo th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #C4C4C4;
+    text-align: center;
+    padding: 10px;
+
+}
+
+#gestionpromotion {
+    background: whitesmoke;
+    margin: 70px;
+    float: left;
+    display: inline-block;
+    padding: 10px;
+}
+
+.imgpromo img {
+    float: right;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 70px;
+    -moz-box-shadow: -2px 1px 3px 0px #656565;
+    -webkit-box-shadow: -2px 1px 3px 0px #656565;;
+    -o-box-shadow: -2px 1px 3px 0px #656565;
+    box-shadow: -3px 5px 3px 0px #656565;
+}
+
+/*******************************gestions des membres*********************************/
+.gestionmembre table {
+    margin: auto;
+    border: solid 1px #DBEAF9;
+}
+
+.gestionmembre a {
+    margin-top: 20px;
+}
+
+.gestionmembre p {
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+}
+.gestionmembre tr {
+    background-color: white;
+}
+
+.gestionmembre th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #C4C4C4;
+    text-align: center;
+    padding: 10px;
+}
+
+.gestionmembre td {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background-color: #DBEAF9;
+    text-align: center;
+    padding: 5px;
+}
+
+#creadmin {
+    background: whitesmoke;
+    float: left;
+    display: inline-block;
+    padding: 10px;
+}
+
+.imagecrea img {
+    float: right;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 100px;
+    -moz-box-shadow: -2px 1px 3px 0px #656565;
+    -webkit-box-shadow: -2px 1px 3px 0px #656565;;
+    -o-box-shadow: -2px 1px 3px 0px #656565;
+    box-shadow: -3px 5px 3px 0px #656565;
+}
+
+/*******************************gestions des commandes*********************************/
+
+.commande table {
+    margin-top: 20px;
+    border: solid 1px #DBEAF9;
+    margin: auto;
+}
+
+.commande p {
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+}
+
+.commande td {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #DBEAF9;
+    text-align: center;
+    padding: 5px;
+}
+
+.commande tr {
+    background: white;
+}
+
+.commande th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #C4C4C4;
+    text-align: center;
+    padding: 10px;
+}
+
+/*******************************detail commande*********************************/
+.detail table {
+    border: solid 1px #DBEAF9;
+    margin: auto;
+}
+
+.detail p {
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+
+}
+
+.detail td {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #DBEAF9;
+    text-align: center;
+    padding: 5px;
+}
+
+.detail tr {
+    background: white;
+}
+
+.detail th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: #C4C4C4;
+    text-align: center;
+    padding: 10px;
+}
+
+/*******************************statistique*********************************/
+.stat {
+    text-align: center;
+}
+.stat p{
+    padding-bottom: 10px;
+}
+
+/*******************************envoyer la newsletter*********************************/
+.logonews img {
+    float: right;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 100px;
+    border-radius: 300px 0 0;
+    -moz-box-shadow: -10px 10px 3px 0px #656565;
+    -webkit-box-shadow: -10px 10px 3px 0px #656565;
+    -o-box-shadow: -10px 10px 3px 0px #656565;
+    box-shadow: -10px 10px 3px 0px #656565;
+
+}
+
+#newl {
+    background: whitesmoke;
+    float: left;
+    display: inline-block;
+    padding: 10px;
+
+}
+
+.logonews img {
+    float: right;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 70px;
+    -moz-box-shadow: -2px 1px 3px 0px #656565;
+    -webkit-box-shadow: -2px 1px 3px 0px #656565;;
+    -o-box-shadow: -2px 1px 3px 0px #656565;
+    box-shadow: -3px 5px 3px 0px #656565;
+}
+
+.formnews p{
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+}
+
+/*******************************abo newsletter*********************************/
+
+#abo_news form {
+    background-color: whitesmoke;
+    padding: 100px;
+    display: inline;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#abo_news input {
+    display: inline;
+}
+
+#abo_news .connect_news {
+    background-color: whitesmoke;
+    padding: 100px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+/*******************************contact*********************************/
+
+#contact {
+    float: left;
+    margin: 70px;
+    background: whitesmoke;
+}
+
+.logo_contact img {
+    float: right;
+    margin: 70px;
+    width: 300px;
+    -moz-box-shadow: -5px 3px 3px 0px #656565;
+    -webkit-box-shadow: -5px 3px 3px 0px #656565;
+    -o-box-shadow: -5px 3px 3px 0px #656565;
+    box-shadow: -5px 3px 3px 0px #656565;
+
+}
+
+/*******************************plan du site*********************************/
+
+.boussol img {
+    float: right;
+    width: 300px;
+    height: 300px;
+    display: inline;
+    margin: 100px;
+    border-radius: 200px;
+    -moz-box-shadow: -10px 10px 3px 0px #656565;
+    -webkit-box-shadow: -10px 10px 3px 0px #656565;
+    -o-box-shadow: -10px 10px 3px 0px #656565;
+    box-shadow: -10px 10px 1px 0px #656565;
+
+}
+
+.pds {
+    float: left;
+    width: 300px;
+    display: inline;
+    margin: 70px;
+}
+
+/*******************************mentions legales*********************************/
+.ml {
+    width: 900px;
+    background: white;
+    text-align: justify;
+    float: left;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin: 20px;
+    padding: 40px;
+    font-style: italic;
+}
+
+/* *******************************cgv************************************ */
+.cgv {
+    width: 900px;
+    background: white;
+    text-align: justify;
+    float: left;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin: 20px;
+    padding: 40px;
+}
+
+/*******************************footer*************************************************/
+footer {
+    background-color: #333333;
+    width: 100%;
+    float: left;
+}
+
+footer a {
+    color: whitesmoke;
+}
+
+footer input {
+    text-align: center;
+    border-radius: 3px;
+}
+
+.bas_gauche {
+    width: 33%;
+    float: left;
+    padding: 20px;
+}
+
+.bas_gauche p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color: whitesmoke;
+}
+
+
+.bas_centre {
+    width: 33%;
+    float: left;
+    text-align: center;
+    padding: 20px;
+}
+.bas_centre p{
+    color: #5a7989;
+}
+
+
+.bas_droit {
+    width: 33%;
+    float: left;
+    padding: 20px;
+}
+
+.logo {
+    margin: 50px;
+}
+.logo img{
+    width: 32px;
+}
+
+/*****************Partie Responsive **************************************************************************/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    nav,
+    section,
+    .index_gauche,
+    .index_droit,
+    footer,
+    #newl
+    {
+        display: block;
+        float: left;
+        height: auto;
+        width: 100%;
+    }
+    .produit img,
+    .clavier img,
+    .imagecrea img,
+    .imgpromo img,
+    .logonews img
+    {
+        display: none;
+    }
+    section{
+        width:100%;
+    }
+     table{
+         width: 100%;
+     }
+
+    .recherchedate {
+        padding: 10px;
+        width: 100%;
+        float: left;
+    }
+
+    .rechercheville {
+        padding: 10px;
+        width: 100%;
+        float: left;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
