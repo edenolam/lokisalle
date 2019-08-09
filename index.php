@@ -72,7 +72,7 @@ $produits = execute_requete("SELECT p.id_produit, DATE_FORMAT(p.date_arrivee,'%d
     <br/>
     <p>Lokisalle est le fournisseur mondial de solutions flexibles d'espaces de travail, de salles de réunions et de
         bureaux virtuels. Lokisalle vous accompagne et vous soutient dans vos activités en devenant une extension de
-        votre business à travers la France.</p>
+        votre business à travers la tsarfat.</p>
     <br/>
     <p>Que le prodigieux spectacle continue et que tu peux y apporter ta Rime.<br>(Walt whiteman)</p>
 
