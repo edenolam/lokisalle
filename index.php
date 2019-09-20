@@ -12,7 +12,6 @@ $produits = execute_requete("SELECT p.id_produit, DATE_FORMAT(p.date_arrivee,'%d
 ?>
 
 
-
 <!-- Slideshow container -->
 <div class="slideshow-container">
 

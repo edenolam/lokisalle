@@ -1,6 +1,4 @@
-
 /* Reset CSS */
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -24,18 +22,19 @@ time, mark, audio, video {
 
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
 
 }
-hr{
+
+hr {
     background-color: #32464c;
     max-width: 400px;
 }
 
-i{
+i {
     color: #ccc;
 }
 
@@ -46,7 +45,7 @@ a {
 }
 
 body {
-    margin:0 auto;
+    margin: 0 auto;
     background: url("../img/floorbg.jpg") no-repeat fixed;
     background-size: 100% 100%;
     font-family: 'Oswald', sans-serif;
@@ -71,7 +70,6 @@ ul, li {
     display: flex;
     justify-content: space-between;
 }
-
 
 .haut_droit a {
     font-style: italic;
@@ -110,8 +108,6 @@ nav a {
 nav a:hover {
     background-color: #ccc;
 }
-
-
 
 /**************************************************** boucle generation produit ************************************************/
 
@@ -166,7 +162,6 @@ input, textarea, select {
     border-radius: 2px;
 }
 
-
 input:focus:invalid, textarea:focus:invalid {
     border-color: #ff0000;
     background: white;
@@ -188,7 +183,7 @@ textarea {
 }
 
 input[type=checkbox] {
-display: inline;
+    display: inline;
 }
 
 input[type=submit], input[type=reset] {
@@ -199,12 +194,13 @@ input[type=submit], input[type=reset] {
     background-color: #56c93f;
     padding: 5px;
 }
-button{
+
+button {
     color: #cdffff;
     background-color: #56c93f;
-    padding: 5px; 
+    padding: 5px;
     border-radius: 5px;
-    border:none;
+    border: none;
 }
 
 /**************************************************** index accueil ************************************************/
@@ -319,6 +315,7 @@ button{
 
 .detail_salle img {
     margin: 5% 12% 12%;
+    width: 200px;
 }
 
 .description_detail {
@@ -449,9 +446,10 @@ button{
 }
 
 /*******************************recherche*********************************/
-.recherche{
-width: 100%;
+.recherche {
+    width: 100%;
 }
+
 .recherchedate {
     background: whitesmoke;
     padding: 10px;
@@ -557,7 +555,6 @@ width: 100%;
 }
 
 /*******************************inscription*********************************/
-
 
 .clavier img {
     float: right;
@@ -699,9 +696,9 @@ width: 100%;
     font-weight: 300;
     background: #DBEAF9;
     text-align: center;
-
 }
-.gestionsalle p{
+
+.gestionsalle p {
     padding: 10px 0 10px 0;
     font-weight: bold;
 }
@@ -881,6 +878,7 @@ width: 100%;
     padding: 10px 0 10px 0;
     font-weight: bold;
 }
+
 .gestionmembre tr {
     background-color: white;
 }
@@ -989,7 +987,8 @@ width: 100%;
 .stat {
     text-align: center;
 }
-.stat p{
+
+.stat p {
     padding-bottom: 10px;
 }
 
@@ -1028,7 +1027,7 @@ width: 100%;
     box-shadow: -3px 5px 3px 0px #656565;
 }
 
-.formnews p{
+.formnews p {
     font-weight: bold;
     padding: 10px 0 10px 0;
 }
@@ -1149,17 +1148,16 @@ footer input {
     color: whitesmoke;
 }
 
-
 .bas_centre {
     width: 33%;
     float: left;
     text-align: center;
     padding: 20px;
 }
-.bas_centre p{
+
+.bas_centre p {
     color: #5a7989;
 }
-
 
 .bas_droit {
     width: 33%;
@@ -1170,7 +1168,8 @@ footer input {
 .logo {
     margin: 50px;
 }
-.logo img{
+
+.logo img {
     width: 32px;
 }
 
@@ -1182,27 +1181,28 @@ footer input {
     .index_gauche,
     .index_droit,
     footer,
-    #newl
-    {
+    #newl {
         display: block;
         float: left;
         height: auto;
         width: 100%;
     }
+
     .produit img,
     .clavier img,
     .imagecrea img,
     .imgpromo img,
-    .logonews img
-    {
+    .logonews img {
         display: none;
     }
-    section{
-        width:100%;
+
+    section {
+        width: 100%;
     }
-     table{
-         width: 100%;
-     }
+
+    table {
+        width: 100%;
+    }
 
     .recherchedate {
         padding: 10px;
