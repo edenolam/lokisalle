@@ -703,6 +703,10 @@ button {
     font-weight: bold;
 }
 
+.gestionsalle img{
+    max-width: 150px;
+}
+
 #ajout_salle {
     background: whitesmoke;
     float: left;
