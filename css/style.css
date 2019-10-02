@@ -558,6 +558,7 @@ button {
 #inscription {
     float: left;
     background-color: whitesmoke;
+    padding: 50px;
 }
 .clavier img {
     float: right;
