@@ -78,7 +78,7 @@ if ($_POST && isset($_GET['action']) && $_GET['action'] == "modification") {
 //------ Suppression des salles" --
 if (isset($_GET['action']) && $_GET['action'] == "suppression") {
     lance_requete("UPDATE salle SET situation = 'inactif' WHERE id_salle ='$_GET[id]'");
-    execute_requete("UPDATE produit SET etat=2 WHERE etat = 0 AND id_salle='$_GET[id]'");
+    execute_requete("UPDATE produit SET etat= 2 WHERE etat = 0 AND id_salle='$_GET[id]'");
     $msg .= "<div class='validation'><p>Salle supprimé ainsi que reservations lié</p></div>";
     $_GET['action'] = "affichage";
 }

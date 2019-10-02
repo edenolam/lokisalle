@@ -521,8 +521,8 @@ button {
 #connect {
     float: left;
     margin: 70px;
-    background: whitesmoke;
-    padding-left: 20px;
+    background-color: whitesmoke;
+    padding: 50px;
 }
 
 .inscri_ici {
@@ -555,7 +555,10 @@ button {
 }
 
 /*******************************inscription*********************************/
-
+#inscription {
+    float: left;
+    background-color: whitesmoke;
+}
 .clavier img {
     float: right;
     width: 300px;

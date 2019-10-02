@@ -36,8 +36,7 @@ echo $msg;
 ?>
 <hr style="color:#c4c4c4; width:400px;"><h3>INSCRIPTION</h3><hr style="color:#c4c4c4; width:400px;">
 <div id="inscription">
-
-			<form method="POST" action="connexion.php" enctype="multipart/form-data">
+    <form method="POST" action="connexion.php" enctype="multipart/form-data">
 
 			<label for="pseudo">Pseudo</label>
 			<input type="text" name="pseudo" id="pseudo" value="<?php if(isset($_POST['pseudo'])) echo $_POST['pseudo']; ?>"/>
@@ -55,17 +54,11 @@ echo $msg;
 
 		    <label for="email">Email</label>
 			<input type="text" name="email" id="email" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>"/>
-			
-
 	        <label>Sexe</label>
-	       
 	        <label>homme</label>
-	    
 			<input style="display: inline;" type="radio" name="sexe" value="m" 
 			<?php if(isset($_POST['sexe']) && $_POST['sexe'] == "m") echo "checked";
-
 			elseif(!isset($_POST['sexe'])) echo "checked"; ?> />
-			
 			<label>femme</label>
 			<input style="display: inline;" type="radio" name="sexe" value="f" 
 			<?php if(isset($_POST['sexe']) && $_POST['sexe'] == "f") echo "checked";?>/>
@@ -76,8 +69,7 @@ echo $msg;
 			
 		    <label for="cp">Cp </label>
 		    <input type="text" name="cp" id="cp" value="<?php if(isset($_POST['cp'])) echo $_POST['cp']; ?>" />
-	
-			
+
 		    <label for="adresse">Adresse</label>
 			<textarea style="max-height:50px;"  type="text" name="adresse" id="adresse"><?php if(isset($_POST['adresse'])) echo $_POST['adresse']; ?>
 			</textarea>
@@ -85,8 +77,6 @@ echo $msg;
 			<input  type="submit" value="valider" name="valider"/>
 			<p>En cliquant sur Inscription, vous acceptez nos <a href ="cgv.php">Conditions</a> et indiquez que vous avez lu notre <a href ="mention_legales.php"> Politique d’utilisation</a> de données</p>
 			</form>
-	
-
 </div>	
 	<div class="clavier">
 	<img src="<?= RACINE_SITE;?>/img/inscription-en-ligne-ouvertes-event.jpg" />
