@@ -1000,6 +1000,7 @@ button {
 }
 
 /*******************************envoyer la newsletter*********************************/
+
 .logonews img {
     float: right;
     width: 300px;
@@ -1040,6 +1041,9 @@ button {
 }
 
 /*******************************abo newsletter*********************************/
+#inscriptionNews{
+    float: left;
+}
 
 #abo_news form {
     background-color: whitesmoke;
@@ -1154,6 +1158,7 @@ footer input {
     font-weight: 300;
     color: whitesmoke;
 }
+
 
 .bas_centre {
     width: 33%;

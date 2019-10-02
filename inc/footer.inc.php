@@ -12,9 +12,7 @@
 						  <a href="" onclick="window.print()">imprimer la page</a>
                         </p>
 						<form class="newsletter" method="POST" action="<?php echo RACINE_SITE; ?>register.php">
-                            <legend>
-                            <input type="submit" id="inscription" name="inscription" value="newsletter">
-                            </legend>
+                            <input type="submit" id="inscriptionNews" name="inscription" value="newsletter">
 						</form>
 				</div>
 
