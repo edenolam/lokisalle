@@ -560,6 +560,7 @@ button {
     background-color: whitesmoke;
     padding: 50px;
 }
+
 .clavier img {
     float: right;
     width: 300px;
@@ -707,7 +708,7 @@ button {
     font-weight: bold;
 }
 
-.gestionsalle img{
+.gestionsalle img {
     max-width: 150px;
 }
 
@@ -1041,7 +1042,7 @@ button {
 }
 
 /*******************************abo newsletter*********************************/
-#inscriptionNews{
+#inscriptionNews {
     float: left;
 }
 

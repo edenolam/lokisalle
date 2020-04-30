@@ -1,10 +1,10 @@
 $(document).ready(function () {
     //datepicker
-    $(function() {
-        $.datepicker.setDefaults( $.datepicker.regional[ "fr" ] );
-        $("#date_arrivee").datepicker( $.datepicker.regional[ "fr" ] );
-        $("#date_depart").datepicker( $.datepicker.regional[ "fr" ] );
-        $("#date_rech").datepicker( $.datepicker.regional[ "fr" ] );
+    $(function () {
+        $.datepicker.setDefaults($.datepicker.regional["fr"]);
+        $("#date_arrivee").datepicker($.datepicker.regional["fr"]);
+        $("#date_depart").datepicker($.datepicker.regional["fr"]);
+        $("#date_rech").datepicker($.datepicker.regional["fr"]);
     });
 
     // $("#myTopnav a").click(function () {

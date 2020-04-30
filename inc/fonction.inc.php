@@ -1,5 +1,4 @@
-﻿
-<?php
+﻿<?php
 /**
  * @param $requete
  * @return bool|mysqli_result
@@ -7,15 +6,12 @@
 function execute_requete($requete)
 {
     global $mysqli;
-
     $resultat = $mysqli->query($requete);
-
-    if(!$resultat){
+    if (!$resultat) {
         die("Erreur de requete:  " . $mysqli->error . "<br /> Requete: " . $requete);
     }
     return $resultat;
 }
-
 
 
 /**
@@ -26,16 +22,14 @@ function lance_requete($requete)
 {
     global $mysqli;
     $resultat = $mysqli->query($requete);
-    if(!$resultat){
+    if (!$resultat) {
         die("Erreur de requête:  " . $mysqli->error . "<br> Requête: " . $requete);
     }
-    if(strstr($requete, "SELECT")){
-        if($resultat->num_rows == 1){
-            $array = $resultat->fetch_assoc();
-            return $array;
-        }
-        elseif($resultat->num_rows > 1){
-            while($array = $resultat->fetch_assoc()){
+    if (strstr($requete, "SELECT")) {
+        if ($resultat->num_rows == 1) {
+            return $resultat->fetch_assoc();
+        } elseif ($resultat->num_rows > 1) {
+            while ($array = $resultat->fetch_assoc()) {
                 $tableau[] = $array;
                 return $tableau;
             }
@@ -45,16 +39,17 @@ function lance_requete($requete)
 }
 
 
-
 /**
  * @param $argument
  */
 function debug($argument)
 {
-    echo "<pre>"; print_r($argument); echo "</pre>";
+    echo "<pre>";
+    print_r($argument);
+    echo "</pre>";
     echo "<hr />";
     $trace = debug_backtrace();
-    echo "print_r demandé dans le fichier<i>: " . $trace[0]['file'] . "</i><br /> Ligne:<i> " . $trace[0]['line'] ."</i>";
+    echo "print_r demandé dans le fichier<i>: " . $trace[0]['file'] . "</i><br /> Ligne:<i> " . $trace[0]['line'] . "</i>";
 }
 
 
@@ -63,15 +58,12 @@ function debug($argument)
  */
 function connecte()
 {
-    if(isset($_SESSION['utilisateur'])){
+    if (isset($_SESSION['utilisateur'])) {
         return true;
+    } else {
+        return false;
     }
-    else{
-            return false;
-        }
 }
-
-
 
 
 /**
@@ -79,12 +71,11 @@ function connecte()
  */
 function connecte_et_est_admin()
 {
-    if(connecte() && ($_SESSION['utilisateur']['statut'] ==1)){
-            return true;
-        }
-        else{
-            return false;
-        }
+    if (connecte() && ($_SESSION['utilisateur']['statut'] == 1)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
@@ -110,22 +101,22 @@ function connecte_et_est_admin()
  */
 function securise()
 {
-    foreach ($_POST as $indice => $valeur){
+    foreach ($_POST as $indice => $valeur) {
         $_POST[$indice] = htmlentities($valeur, ENT_QUOTES);
     }
 }
 
 
-
 /**
  * @return bool
  */
-function verification_extension_photo(){
-	$extension = strrchr($_FILES['photo']['name'] , ".");
-	$extension = strtolower(substr($extension , 1));
-	$tab_extension_valide = array("jpeg", "jpg", "png" , "gif");
-	$verif_extension = in_array($extension, $tab_extension_valide);
-	return $verif_extension;
+function verification_extension_photo()
+{
+    $extension = strrchr($_FILES['photo']['name'], ".");
+    $extension = strtolower(substr($extension, 1));
+    $tab_extension_valide = array("jpeg", "jpg", "png", "gif");
+    $verif_extension = in_array($extension, $tab_extension_valide);
+    return $verif_extension;
 }
 
 
@@ -141,7 +132,6 @@ function information_sur_une_chose($id, $chose)
 }
 
 
-
 /**
  * @param $id
  * @return bool|mysqli_result
@@ -151,7 +141,6 @@ function information_sur_un_produit($id)
     $resultat = execute_requete("SELECT * FROM produit WHERE id_produit=$id");
     return $resultat;
 }
-
 
 
 /**
@@ -165,17 +154,15 @@ function information_sur_une_salle($id)
 }
 
 
-
 /**
  * @param $id
  * @return bool|mysqli_result
  */
 function information_sur_un_membre($id)
 {
-    $resultat = execute_requete("SELECT * FROM membre WHERE id_membre=$id");
+    $resultat = execute_requete("SELECT * FROM membre WHERE id_membre = $id");
     return $resultat;
 }
-
 
 
 /**
@@ -185,12 +172,11 @@ function information_sur_un_membre($id)
 function mdp_reinit($long)
 {
     $caractere = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4,5,6,7,8,9,0";
-    $array = explode(",",$caractere);
+    $array = explode(",", $caractere);
     shuffle($array);
-    $chaine = implode($array,"");
+    $chaine = implode($array, "");
     return substr($chaine, 0, $long);
 }
-
 
 
 /**
@@ -199,25 +185,23 @@ function mdp_reinit($long)
 function creation_panier()
 {
 
-		if(!isset($_SESSION['panier'])){
+    if (!isset($_SESSION['panier'])) {
 
-				$_SESSION['panier'] = array();
-				$_SESSION['panier']['produit'] = array();
-				$_SESSION['panier']['titre'] = array();
-				$_SESSION['panier']['photo'] = array();
-				$_SESSION['panier']['ville'] = array();
-				$_SESSION['panier']['capacite'] = array();
-				$_SESSION['panier']['date_arrivee'] = array();
-				$_SESSION['panier']['date_depart'] = array();
-				$_SESSION['panier']['prix'] = array();
-				$_SESSION['panier']['code_promo'] = array();
-				$_SESSION['panier']['reduction'] = array();	
+        $_SESSION['panier'] = array();
+        $_SESSION['panier']['produit'] = array();
+        $_SESSION['panier']['titre'] = array();
+        $_SESSION['panier']['photo'] = array();
+        $_SESSION['panier']['ville'] = array();
+        $_SESSION['panier']['capacite'] = array();
+        $_SESSION['panier']['date_arrivee'] = array();
+        $_SESSION['panier']['date_depart'] = array();
+        $_SESSION['panier']['prix'] = array();
+        $_SESSION['panier']['code_promo'] = array();
+        $_SESSION['panier']['reduction'] = array();
 
-        }
-		return true;	
-	}
-
-
+    }
+    return true;
+}
 
 
 /**
@@ -234,25 +218,24 @@ function creation_panier()
 function ajout_panier($produit, $titre, $photo, $ville, $capacite, $date_arrivee, $date_depart, $prix, $code_promo)
 {
 
-		$position_produit = array_search($produit, $_SESSION['panier']['produit']);		
-		
-		if($position_produit === false){
-					
-					$_SESSION['panier']['produit'][] = $produit;
-					$_SESSION['panier']['titre'][] = $titre;
-					$_SESSION['panier']['photo'][] = $photo;
-					$_SESSION['panier']['ville'][]= $ville;
-					$_SESSION['panier']['capacite'][] = $capacite;
-					$_SESSION['panier']['date_arrivee'][] = $date_arrivee;
-					$_SESSION['panier']['date_depart'][] = $date_depart;
-					$_SESSION['panier']['prix'][] = $prix;	
-					$_SESSION['panier']['code_promo'][] = $code_promo;	
-					$_SESSION['panier']['reduction'][] = $prix;
-					$_SESSION['panier']['statut'][] = 0 ;	
-					
-			}
-	}
-	
+    $position_produit = array_search($produit, $_SESSION['panier']['produit']);
+
+    if ($position_produit === false) {
+
+        $_SESSION['panier']['produit'][] = $produit;
+        $_SESSION['panier']['titre'][] = $titre;
+        $_SESSION['panier']['photo'][] = $photo;
+        $_SESSION['panier']['ville'][] = $ville;
+        $_SESSION['panier']['capacite'][] = $capacite;
+        $_SESSION['panier']['date_arrivee'][] = $date_arrivee;
+        $_SESSION['panier']['date_depart'][] = $date_depart;
+        $_SESSION['panier']['prix'][] = $prix;
+        $_SESSION['panier']['code_promo'][] = $code_promo;
+        $_SESSION['panier']['reduction'][] = $prix;
+        $_SESSION['panier']['statut'][] = 0;
+
+    }
+}
 
 
 /**
@@ -260,13 +243,12 @@ function ajout_panier($produit, $titre, $photo, $ville, $capacite, $date_arrivee
  */
 function prix_total_base()
 {
-	$total = 0;
-	for($i = 0; $i < count($_SESSION['panier']['produit']); $i++){
-			$total += $_SESSION['panier']['prix'][$i] * 1.2;
-		}
-	return $total;
-}	
-
+    $total = 0;
+    for ($i = 0; $i < count($_SESSION['panier']['produit']); $i++) {
+        $total += $_SESSION['panier']['prix'][$i] * 1.2;
+    }
+    return $total;
+}
 
 
 /**
@@ -275,16 +257,14 @@ function prix_total_base()
 function prix_total()
 {//final avec reduc
 
-	$total = 0;
-	for($i = 0; $i < count($_SESSION['panier']['produit']) ; $i++){
+    $total = 0;
+    for ($i = 0; $i < count($_SESSION['panier']['produit']); $i++) {
 
-			$total += $_SESSION['panier']['reduction'][$i] * 1.2;
+        $total += $_SESSION['panier']['reduction'][$i] * 1.2;
     }
-	
-	return $total;
+
+    return $total;
 }
-
-
 
 
 /**
@@ -293,28 +273,28 @@ function prix_total()
 function retirer_produit_panier($id)
 {
 
-		$produit_existe = in_array($id, $_SESSION['panier']['produit']);
+    $produit_existe = in_array($id, $_SESSION['panier']['produit']);
 
-		if ($produit_existe){
-			$position_produit = array_search($id,$_SESSION['panier']['produit']);
-            array_splice($_SESSION['panier']['produit'], $position_produit , 1);
-            array_splice($_SESSION['panier']['titre'], $position_produit , 1);
-            array_splice($_SESSION['panier']['photo'], $position_produit , 1);
-            array_splice($_SESSION['panier']['ville'], $position_produit , 1);
-            array_splice($_SESSION['panier']['capacite'], $position_produit , 1);
-            array_splice($_SESSION['panier']['date_arrivee'], $position_produit , 1);
-            array_splice($_SESSION['panier']['date_depart'], $position_produit , 1);
-            array_splice($_SESSION['panier']['prix'], $position_produit , 1);
-            array_splice($_SESSION['panier']['code_promo'], $position_produit , 1);
-            array_splice($_SESSION['panier']['reduction'], $position_produit , 1);
-		
-		}
+    if ($produit_existe) {
+        $position_produit = array_search($id, $_SESSION['panier']['produit']);
+        array_splice($_SESSION['panier']['produit'], $position_produit, 1);
+        array_splice($_SESSION['panier']['titre'], $position_produit, 1);
+        array_splice($_SESSION['panier']['photo'], $position_produit, 1);
+        array_splice($_SESSION['panier']['ville'], $position_produit, 1);
+        array_splice($_SESSION['panier']['capacite'], $position_produit, 1);
+        array_splice($_SESSION['panier']['date_arrivee'], $position_produit, 1);
+        array_splice($_SESSION['panier']['date_depart'], $position_produit, 1);
+        array_splice($_SESSION['panier']['prix'], $position_produit, 1);
+        array_splice($_SESSION['panier']['code_promo'], $position_produit, 1);
+        array_splice($_SESSION['panier']['reduction'], $position_produit, 1);
 
-		
+    }
+
+
 }
-	
-	
-	//--------------------------
+
+
+//--------------------------
 /**
  * @param $prix
  * @param $pourcentage
@@ -322,7 +302,7 @@ function retirer_produit_panier($id)
  */
 function code_reduc($prix, $pourcentage)
 {
-    return $prix * ( $pourcentage / 100 );
+    return $prix * ($pourcentage / 100);
 }
 	
 
@@ -352,4 +332,3 @@ function code_reduc($prix, $pourcentage)
 
 
 
-	

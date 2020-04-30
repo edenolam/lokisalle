@@ -53,16 +53,21 @@ include("inc/menu.inc.php");
 echo $msg;
 ?>
 
-<hr style="color:#c4c4c4; width:400px;"><h3>CONNEXION</h3><hr style="color:#c4c4c4; width:400px;">
+<hr style="color:#c4c4c4; width:400px;"><h3>CONNEXION</h3>
+<hr style="color:#c4c4c4; width:400px;">
 <div id="connect">
     <form method="POST" action="" enctype="multipart/form-data">
         <label for="pseudo">Pseudo:</label>
-        <input type="text" name="pseudo" id="pseudo" value="<?php if (isset($_COOKIE["pseudo"])) {echo $pseudo["pseudo"];} ?>"/>
+        <input type="text" name="pseudo" id="pseudo" value="<?php if (isset($_COOKIE["pseudo"])) {
+            echo $pseudo["pseudo"];
+        } ?>"/>
         <label for="pw_login">Mot de passe:</label>
         <input type="password" name="pw_login" id="pw_login"/>
         <p><a href="mdp_oubli.php">Mot de passe oublié ?</a></p>
         <p>Se souvenir de moi</p>
-        <input type="checkbox" id="checkbox" name="checkbox" <?php if (isset($_COOKIE["pseudo"])) {echo "checked";} ?>>
+        <input type="checkbox" id="checkbox" name="checkbox" <?php if (isset($_COOKIE["pseudo"])) {
+            echo "checked";
+        } ?>>
         <input type="submit" name="connexion" value="Connexion">
     </form>
 </div>

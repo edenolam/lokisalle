@@ -14,12 +14,13 @@ $produits = execute_requete("SELECT p.id_produit, DATE_FORMAT(p.date_arrivee,'%d
 include("inc/haut_de_site.inc.php");
 include("inc/menu.inc.php");
 ?>
-	
-	<div id="reservation">
-			<hr><h2>TOUTES NOS OFFRES</h2><hr>
-			<?php include("inc/diffusion_produit.inc.php");?>  
-	</div>
 
+    <div id="reservation">
+        <hr>
+        <h2>TOUTES NOS OFFRES</h2>
+        <hr>
+        <?php include("inc/diffusion_produit.inc.php"); ?>
+    </div>
 
 
 <?php

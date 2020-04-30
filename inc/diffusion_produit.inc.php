@@ -29,9 +29,9 @@
                     <a href="<?php echo RACINE_SITE; ?>connexion.php?id_produit=<?php echo $produit['id_produit']; ?>">Connectez
                         vous pour ajouter au panier</a>
                 <?php endif; ?>
-            <div>
-            <br/>
-            <br/>
+                <div>
+                    <br/>
+                    <br/>
         </li>
     <?php endforeach; ?>
 
